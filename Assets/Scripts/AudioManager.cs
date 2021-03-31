@@ -5,7 +5,11 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
-    private void Awake(){ instance = this; }
+    private void Awake()
+    {
+        instance = this;
+        
+    }
 
     //Sound Effects
     public AudioClip sfx_jump, sfx_landing;

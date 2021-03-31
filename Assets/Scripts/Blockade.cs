@@ -4,16 +4,12 @@ using UnityEngine;
 
 public class Blockade : MonoBehaviour
 {
-    public GameObject box;
-    
-
-    private void Start()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
-        
-        if (PressurePlate.BoxBroken == true)
+        if (collision.gameObject.tag == "Box")
         {
-            Destroy(gameObject);
+            Destroy(gameObject, 2);
+
         }
     }
 }
