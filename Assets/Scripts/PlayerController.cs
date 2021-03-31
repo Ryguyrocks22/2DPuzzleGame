@@ -54,12 +54,20 @@ public class PlayerController : MonoBehaviour
 
     void GroundCheck()
     {
+        bool wasGrounded = isGrounded;
         isGrounded = false;
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheckCollider.position, groundCheckRadius, groundLayer);
 
         if (colliders.Length > 0)
+        {
             isGrounded = true;
+            if (!wasGrounded)
+            {
+                AudioManager.instance.PlaySFX("landing");
+            }
+        }
+            
 
         animator.SetBool("Jump", !isGrounded);
     }
