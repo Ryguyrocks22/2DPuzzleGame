@@ -24,7 +24,7 @@ public class LifeCount : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Z))
             LoseLife();
-        Debug.Log("DEATH");
+        
     }
 
 }
