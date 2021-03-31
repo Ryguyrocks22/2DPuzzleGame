@@ -6,14 +6,14 @@ using UnityEngine.UI;
 
 public class LifeCount : MonoBehaviour
 {
-    //public Image[] lives;
+    public Image[] lives;
     public int livesRemaining;
 
     public void LoseLife()
     {
         livesRemaining--;
 
-        //lives[livesRemaining].enabled = false;
+        lives[livesRemaining].enabled = false;
 
         if (livesRemaining == 0)
         {
