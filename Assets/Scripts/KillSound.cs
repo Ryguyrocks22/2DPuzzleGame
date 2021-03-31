@@ -17,7 +17,6 @@ public class KillSound : MonoBehaviour
     {
         if (!source.isPlaying)
         {
-            Debug.Log(name + "Stop playing");
             Destroy(gameObject);
         }
     }
