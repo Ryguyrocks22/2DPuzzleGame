@@ -8,7 +8,7 @@ public class Blockade : MonoBehaviour
     {
         if (collision.gameObject.tag == "Box")
         {
-            Destroy(gameObject, 2);
+            Destroy(gameObject, 1);
 
         }
     }
