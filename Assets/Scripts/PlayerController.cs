@@ -102,6 +102,15 @@ public class PlayerController : MonoBehaviour
     public void Die()
     {
         isDead = true;
+        SceneManager.LoadScene(3);
     }
-    
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Family")
+        {
+            SceneManager.LoadScene(4);
+        }
+
+    }
+
 }
