@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     bool jump = false;
     bool isDead = false;
 
+    
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
